@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nestjs-sse-demo:
+    hostname: nestjs-sse-demo
+    image: nestjs-sse-demo:latest
+    container_name: nestjs-sse-demo
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - "3000:3000"
+    networks:
+      - main
+
+networks:
+  main:
+    external: true
